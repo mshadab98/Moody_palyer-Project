@@ -1,0 +1,109 @@
+.facial-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container {
+  position: relative;
+  width: 400px;
+  max-width: 90vw;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.video-feed {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.scanner-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.2);
+}
+
+.scanner {
+  width: 80%;
+  height: 4px;
+  background: linear-gradient(90deg, #00f, #0ff);
+  animation: scan 1s infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.mood-panel {
+ 
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  
+}
+
+.mood-panel h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.mood-panel p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.mood-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mood-icon {
+  font-size: 2rem;
+  color: #ff7a18;
+}
+
+.mood-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.detect-btn {
+  background: #ff7a18;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.detect-btn:hover {
+  background: #ff5722;
+}
+
+.detect-btn.loading {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.hint {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
