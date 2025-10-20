@@ -49,7 +49,7 @@ const FacialExpression = ({ setSongs }) => {
         const invalidMoods = ["unknown", "no face detected", "waiting...", "error detecting expression"];
         if (!invalidMoods.includes(mood)) {
           axios
-            .get(`http://localhost:5000/songs?mood=${mood}`)
+            .get(`https://moody-palyer-project-backend.onrender.com/songs?mood=${mood}`)
             .then((res) => setSongs(res.data.songs || []))
             .catch((err) => console.error(err));
         }
